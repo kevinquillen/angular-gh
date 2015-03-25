@@ -1,0 +1,20 @@
+<h1>{{ user.login }}</h1>
+
+<div class="row">
+  <div class="col-xs-6 col-md-4">
+    <img ng-src="{{ user.avatar_url }}" width="100%" />
+  </div>
+
+  <div class="col-xs-6 col-md-8">
+    <p><strong>Website:</strong> <a ng-href="{{ user.blog }}" target="_blank">{{ user.blog }}</a> <br>
+      <strong>Company:</strong> {{ user.company }} <br>
+      <strong>Location:</strong> {{ user.location }} <br></p>
+  </div>
+</div>
+
+<hr>
+<div class="row" ng-show="repos">
+  <div ng-include="'views/user/repos.html'"></div>
+</div>
+
+<a class="btn btn-warning btn-block" href="#/">&laquo; Back to Search</a>

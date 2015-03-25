@@ -1,0 +1,20 @@
+<div class="jumbotron">
+  <h2>AngularJS + GitHub Demo</h2>
+  <h4>With Jasmine tests.</h4>
+</div>
+
+<form name="searchUser" class="search-form">
+  <div class="row">
+    <div class="col-md-10">
+      <input type="text" ng-model="username" class="form-control" placeholder="What GitHub user are you looking for?" />
+    </div>
+
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-success btn-block btn-search" ng-disabled="!username.length" ng-click="search(username)">Search &raquo;</button>
+    </div>
+  </div>
+</form>
+
+<div ng-show="user">
+  <div ng-include="'views/user/result.html'"></div>
+</div>

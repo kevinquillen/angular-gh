@@ -1,0 +1,19 @@
+<div class="row">
+  <table class="table results">
+    <th>Username</th>
+    <th>Repos</th>
+    <th>Gists</th>
+    <th>Member Since</th>
+    <th>Company</th>
+    <th></th>
+
+    <tr>
+      <td><a ng-href="#/user/{{ user.login }}" id="user-link">{{ user.login }}</a></td>
+      <td>{{ user.public_repos }}</td>
+      <td>{{ user.public_gists }}</td>
+      <td>{{ user.created_at | date: 'shortDate' }}</td>
+      <td>{{ user.company }}</td>
+      <td align="right"><a ng-href="#/user/{{ user.login }}" type="button" class="btn btn-info btn-xs">View User &raquo;</a></td>
+    </tr>
+  </table>
+</div>

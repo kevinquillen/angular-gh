@@ -1,0 +1,11 @@
+<div class="row">
+  <table class="table">
+    <th>Repository</th>
+    <th>Default Branch</th>
+
+    <tr ng-repeat="repo in repos">
+      <td><a ng-href="https://github.com/{{ user.login }}/{{ repo.name }}" target="_blank" data-toggle="tooltip" data-placement="right" title="{{ repo.description }}">{{ repo.name }}</a></td>
+      <td><span class="label label-success">{{ repo.default_branch }}</span></td>
+    </tr>
+  </table>
+</div>
